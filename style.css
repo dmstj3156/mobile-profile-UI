@@ -1,0 +1,133 @@
+/*style.css*/
+
+/*
+    1. 사진 영역 높이 : 59%
+    2. 하단 정보영역 높이 : 46%
+    3. 서체, 색상 설정
+*/
+:root{
+    --main-color:#6B358E;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #444;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+header{
+    position: absolute;
+    width: 100vw;
+}
+header > .back-btn{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    
+
+}
+header > .toggle-btn{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background: none;
+    border: none;
+}
+.back-btn, .toggle-btn{
+    font-size: 28px;
+    color: white;
+    z-index: 999;
+}
+.card{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc;
+}
+.card > figure{
+    height: 59vh;
+    background-image: url(./images/마스크\ 그룹\ 1.png);
+    background-size: cover;
+    position: relative;
+}
+/* 사진 그라디언트 필터 효과*/
+.card > figure > .filter{
+    position: absolute;
+    width: 100%;
+    height: 59vh;
+    left: 0;
+    top: 0;
+    background-color: black;
+    background: linear-gradient(180deg, rgba(0,0,0,1),rgba(0,0,0,0) 30%);
+}
+.card .info{
+    width: 100vw;
+    height: 46vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card > .info .container{
+    /*outline: 1px solid slateblue;*/
+    width: 100vw;
+}
+.card > .info .name{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card > .info .location{
+    margin-bottom: 30px;
+}
+.card > .info .count-info{
+    display: flex;
+   margin-bottom: 55px;
+}
+.card > .info .count-info > li{
+    flex: 1;
+    border-right: 1px solid  rgb(139, 139, 139);
+}
+.card > .info .count-info > li:last-child{
+    border-right: none;
+}
+.card > .info .count-info .count{
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+.card > .info .count-info .title{
+    font-size: 12px;
+    color: rgb(107, 107, 107);
+}
+.btn {
+    width: 140px;
+    height: 40px;
+    
+}
+.follow-btn{
+    color: white;
+    background-color: var(--main-color);
+    margin-right: 30px;
+    
+}
+.message-btn{
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    background-color: white;
+    font-weight: bold;
+}
